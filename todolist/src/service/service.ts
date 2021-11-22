@@ -1,14 +1,5 @@
 import { User } from '../entity/User';
-const users = []
 
-const test = async(req,res) => {
-    try {
-        res.send('server start')
-        console.log('server start')
-    } catch (e) {
-        return res.json(e)
-    }
-}
 const create = async(req,res) => {
     const {todo} = req.body
     try {
@@ -18,4 +9,14 @@ const create = async(req,res) => {
         return res.json(e)
     }
 }
-export {test,create}
+const deleteAll = async(req,res) => {
+    try {
+        const us = await User.find()
+        for(let i=0; i<us.length; i++){
+            us[i].remove()
+        }
+    } catch (e) {
+        return res.json(e)
+    }
+}
+export {create,deleteAll}

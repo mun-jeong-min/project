@@ -14,11 +14,13 @@
             <input type="text" placeholder="새로운 할 일을 입력하세요." name="todo" value="new_todo">
             <button type="submit"><b>추가</b></button>
         </form>
+        <form action="/delete" method="post">
         <div class="todolist">
             <ul>
             </ul>
-            <a id="clear">모두 삭제</a>
+                <button class="clear">전체 삭제</button>
         </div>
+        </form>
     </div>
     <script type="text/Javascript" src="./main.js"></script>"
 </body>
