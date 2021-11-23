@@ -1,7 +1,7 @@
 init();
 
 function init() {
-    document.querySelector('form').addEventListener('submit', addToDo);
+    document.getElementById('f').addEventListener('submit', addToDo);
     document.getElementById('clear').addEventListener('click', clearTodoList);
     document.querySelector('ul').addEventListener('click', deleteOrCheck);
 }
