@@ -1,4 +1,8 @@
+import * as express from 'express'
 import { User } from '../entity/User';
+import * as bodyParser from 'body-parser'
+const app = express()
+app.use(bodyParser.urlencoded({extended:true}))
 
 const create = async(req,res) => {
     const {todo} = req.body;
